@@ -133,7 +133,6 @@ namespace Capa_presentacion
             txtvehiculoID.Clear();
             cbxEstado.ResetText();
         
-        }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
