@@ -26,6 +26,7 @@ namespace Capa_presentacion
             DataTable dtMostrar = mostrar.MtMostrar();
             datagriVehiculo.DataSource = dtMostrar;
         }
+           
 
         private void Formvehiculo_Load(object sender, EventArgs e)
         {
@@ -35,10 +36,12 @@ namespace Capa_presentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             CD_vehiculos conn = new CD_vehiculos();
+         
 
             try
             {
                 conn.MtInsertar(
+
                     txtMarca.Text,
                     txtModelo.Text,
                     int.Parse(txtAño.Text),
@@ -65,14 +68,14 @@ namespace Capa_presentacion
             try
             {
                 conn.MtUpdate(
-                    int.Parse(txtvehiculoID.Text),
+                     int.Parse(txtVehiculo.Text),
                     txtMarca.Text,
                     txtModelo.Text,
                     int.Parse(txtAño.Text),
                     decimal.Parse(txtPrecio.Text),
                     cbxEstado.Text);
 
-                MessageBox.Show("El Vehiculo se actualizo con éxito", "Correcto",
+                MessageBox.Show("El Vehiculo se edito con éxito", "Correcto",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -87,19 +90,22 @@ namespace Capa_presentacion
 
         private void datagriVehiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtVehiculo.Enabled = false;
 
-        }
-
-        private void datagriVehiculo_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtvehiculoID.Enabled = false;
-
-            txtvehiculoID.Text = datagriVehiculo.SelectedCells[0].Value.ToString();
+            txtVehiculo.Text = datagriVehiculo.SelectedCells[0].Value.ToString();
             txtMarca.Text = datagriVehiculo.SelectedCells[1].Value.ToString();
             txtModelo.Text = datagriVehiculo.SelectedCells[2].Value.ToString();
             txtAño.Text = datagriVehiculo.SelectedCells[3].Value.ToString();
             txtPrecio.Text = datagriVehiculo.SelectedCells[4].Value.ToString();
             cbxEstado.Text = datagriVehiculo.SelectedCells[5].Value.ToString();
+           
+        }
+
+
+        private void datagriVehiculo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+           
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
@@ -109,9 +115,9 @@ namespace Capa_presentacion
             try
             {
                 conn.MtDelete(
-                    int.Parse(txtvehiculoID.Text));
+                    int.Parse(txtVehiculo.Text));
 
-                MessageBox.Show("El Vehiculo se elimino con éxito", "Correcto",
+                MessageBox.Show("El vehiculo se elimino con éxito", "Correcto",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -126,12 +132,16 @@ namespace Capa_presentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            txtVehiculo.Clear();
+            txtMarca.Clear();   
+            
+            txtModelo.Clear();    
             txtAño.Clear();
-            txtPrecio.Clear();
-            txtModelo.Clear();
-            txtMarca.Clear();
-            txtvehiculoID.Clear();
+            txtPrecio.Clear(); 
+       
+          
             cbxEstado.ResetText();
+        }
         
 
         private void btnsalir_Click(object sender, EventArgs e)

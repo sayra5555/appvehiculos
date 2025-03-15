@@ -34,7 +34,7 @@
             this.txtAño = new System.Windows.Forms.TextBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
-            this.txtvehiculoID = new System.Windows.Forms.TextBox();
+            this.txtVehiculo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.groupBox1.Controls.Add(this.txtAño);
             this.groupBox1.Controls.Add(this.txtModelo);
             this.groupBox1.Controls.Add(this.txtMarca);
-            this.groupBox1.Controls.Add(this.txtvehiculoID);
+            this.groupBox1.Controls.Add(this.txtVehiculo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -73,7 +73,7 @@
             this.groupBox1.Size = new System.Drawing.Size(767, 175);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vehiculos";
+            this.groupBox1.Text = "AppVehiculos";
             // 
             // cbxEstado
             // 
@@ -81,50 +81,50 @@
             this.cbxEstado.Items.AddRange(new object[] {
             "Disponible",
             "No disponible"});
-            this.cbxEstado.Location = new System.Drawing.Point(412, 138);
+            this.cbxEstado.Location = new System.Drawing.Point(390, 135);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(116, 21);
             this.cbxEstado.TabIndex = 14;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(411, 70);
+            this.txtPrecio.Location = new System.Drawing.Point(390, 83);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 13;
             // 
             // txtAño
             // 
-            this.txtAño.Location = new System.Drawing.Point(411, 21);
+            this.txtAño.Location = new System.Drawing.Point(390, 25);
             this.txtAño.Name = "txtAño";
             this.txtAño.Size = new System.Drawing.Size(100, 20);
             this.txtAño.TabIndex = 12;
             // 
             // txtModelo
             // 
-            this.txtModelo.Location = new System.Drawing.Point(144, 120);
+            this.txtModelo.Location = new System.Drawing.Point(115, 108);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(100, 20);
             this.txtModelo.TabIndex = 11;
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(144, 70);
+            this.txtMarca.Location = new System.Drawing.Point(60, 74);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtMarca.Size = new System.Drawing.Size(177, 20);
             this.txtMarca.TabIndex = 10;
             // 
-            // txtvehiculoID
+            // txtVehiculo
             // 
-            this.txtvehiculoID.Location = new System.Drawing.Point(144, 20);
-            this.txtvehiculoID.Name = "txtvehiculoID";
-            this.txtvehiculoID.Size = new System.Drawing.Size(100, 20);
-            this.txtvehiculoID.TabIndex = 9;
+            this.txtVehiculo.Location = new System.Drawing.Point(88, 25);
+            this.txtVehiculo.Name = "txtVehiculo";
+            this.txtVehiculo.Size = new System.Drawing.Size(51, 20);
+            this.txtVehiculo.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(365, 138);
+            this.label6.Location = new System.Drawing.Point(320, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 8;
@@ -133,25 +133,25 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(368, 77);
+            this.label5.Location = new System.Drawing.Point(313, 86);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Precio";
+            this.label5.Text = "PRECIO";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(365, 28);
+            this.label4.Location = new System.Drawing.Point(313, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Año";
+            this.label4.Text = "AÑO";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 127);
+            this.label3.Location = new System.Drawing.Point(17, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 5;
@@ -273,7 +273,7 @@
         private System.Windows.Forms.TextBox txtAño;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.TextBox txtvehiculoID;
+        private System.Windows.Forms.TextBox txtVehiculo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView datagriVehiculo;

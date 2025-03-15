@@ -11,7 +11,7 @@ namespace CD_datos
     public class CD_conexion
     {
         private SqlConnection db_conexion = new SqlConnection("Data Source=DESKTOP-9QF8HLG\\SQLEXPRESS;" +
-     "Initial Catalog=db_AgenciaCarros;" +
+         "Initial Catalog=db_AgenciaCarros;" +
      "Integrated Security=True;Encrypt=False");
 
         public SqlConnection MtdAbrirConexion()
@@ -27,5 +27,7 @@ namespace CD_datos
                 db_conexion.Close();
             return db_conexion;
         }
+
     }
+
 }
